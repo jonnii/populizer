@@ -7,16 +7,16 @@ gem 'sqlite3'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'uglifier', '>= 1.0.3'
-
+gem 'haml-rails'
 gem 'jquery-rails'
-gem 'heroku'
 
 gem 'devise'
-
 gem 'faker'
 
+gem 'heroku'
+gem 'therubyracer-heroku', '0.8.1.pre3'
+
 # global layout related
-gem 'haml-rails'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
