@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe NamesController do
-  describe "on GET :index" do
+  describe "on GET :random" do
     before(:each) do
-      get :index, :format => :json
+      get :random, :format => :json
     end
 
     it do

@@ -2,7 +2,11 @@ Populizer::Application.routes.draw do
 
   devise_for :users
 
-  resources :names
+  resources :names do
+    collection do
+      get :random
+    end
+  end
 
   root :to => 'welcome#index'
 end

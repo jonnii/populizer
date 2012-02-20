@@ -1,5 +1,5 @@
 class NamesController < ApplicationController
-  def show
+  def random
     respond_to do |f|
       f.json { render :json => Faker::Name.first_name }
     end
