@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/cgunther/formtastic-bootstrap.git
+  revision: f1acce518d9729e5233b85f41f91c2f06f1af215
+  branch: 2.0
+  specs:
+    formtastic-bootstrap (1.1.2)
+      formtastic
+      rails (>= 3.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -83,6 +92,8 @@ GEM
     faker (1.0.1)
       i18n (~> 0.4)
     ffi (1.0.11)
+    formtastic (2.1.0.beta1)
+      actionpack (~> 3.0)
     gherkin (2.8.0)
       json (>= 1.4.6)
     haml (3.1.4)
@@ -210,6 +221,8 @@ DEPENDENCIES
   email_spec
   factory_girl_rails
   faker
+  formtastic (= 2.1.0.beta1)
+  formtastic-bootstrap!
   haml-rails
   heroku
   jquery-rails

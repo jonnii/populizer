@@ -20,5 +20,7 @@ Populizer::Application.routes.draw do
     end
   end
 
+  resources :builders
+
   root :to => 'welcome#index'
 end

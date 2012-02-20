@@ -13,6 +13,9 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'faker'
 
+gem 'formtastic', '2.1.0.beta1'
+gem 'formtastic-bootstrap', :git => 'git://github.com/cgunther/formtastic-bootstrap.git', :branch => '2.0'
+
 gem 'heroku'
 gem 'therubyracer-heroku', '0.8.1.pre3'
 
