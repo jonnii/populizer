@@ -10,9 +10,11 @@ class BuildersController < ApplicationController
 
   def create
     @builder = Builder.new(params[:builder])
-    
-    
+    @built = @builder.make
 
-    render :text => @builder.make
+    respond_to do |f|
+      f.html 
+      f.json { render :json => @built }  
+    end 
   end
 end
