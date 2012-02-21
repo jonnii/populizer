@@ -3,7 +3,7 @@ class Builder
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-  attr_accessor :prototype
+  attr_accessor :prototype, :count
 
   validates_presence_of :prototype
 
@@ -19,13 +19,17 @@ class Builder
 
 
   def make
-    result = {}
+    parsed_prototype = ActiveSupport::JSON.decode(self.prototype)
+    self.count.to_i.times.map do
+      build_from_prototype(parsed_prototype)
+    end
+  end
 
-    schema =  ActiveSupport::JSON.decode(self.prototype)
-
-    schema.each do |field|
+  def build_from_prototype(prototype)
+    instance = {}
+    prototype.each do |field|
       field.each_pair do |name, value|
-        result[name] = case value
+        instance[name] = case value
         when 'first_name'
           Faker::Name.first_name
         when 'last_name'
@@ -35,7 +39,6 @@ class Builder
         end
       end
     end
-
-    result
+    instance
   end
 end
